@@ -1,0 +1,30 @@
+/* Kayz Island — type. One family argues, one family files.
+   Newsreader speaks (excerpts 400, titles 800, real italics); Familjen Grotesk
+   files. Scale authored at 1080px social canvas. */
+:root{
+  --kz-font-serif: 'Newsreader', Georgia, serif;         /* speaks */
+  --kz-font-grotesk: 'Familjen Grotesk', sans-serif;     /* files; never speaks */
+  --kz-font-mono: var(--kz-font-grotesk);                /* alias — same functional layer */
+
+  /* masthead + title */
+  --kz-type-masthead: 48px;        --kz-ls-masthead: 0.3em;
+  --kz-type-masthead-run: 26px;    --kz-ls-run: 0.24em;
+  --kz-type-title: 126px;
+  --kz-type-terminal: 176px;       /* the scalpel word: "Die full." */
+
+  /* excerpts (Newsreader 400, italic Newsreader for emphasis, text-wrap pretty) */
+  --kz-type-excerpt-xl: 100px;     /* ≤ 6 words */
+  --kz-type-excerpt-l: 88px;       /* ≤ 10 words */
+  --kz-type-excerpt-m: 76px;       /* ≤ 14 words */
+  --kz-type-excerpt-s: 58px;       /* ≤ 26 words */
+  --kz-type-excerpt-panel: 44px;   /* inside a photo side-panel */
+
+  /* voice furniture */
+  --kz-type-standfirst: 35px;      /* Newsreader italic */
+  --kz-type-footnote: 42px;        /* italic secondary, ink-2 */
+
+  /* functional layer (Spline Sans Mono) */
+  --kz-type-kicker: 23px;          --kz-ls-kicker: 0.22em;
+  --kz-type-folio: 20px;           --kz-ls-folio: 0.14em;
+  --kz-type-data: 21px;            --kz-ls-data: 0.2em;
+}

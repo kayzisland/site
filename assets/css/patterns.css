@@ -1,0 +1,66 @@
+/* Kayz Island — the page anatomy as shared classes.
+   These are the same rules the React primitives render with.
+   The page furniture of the finals: hairline under the running head, hairline above
+   the folio. NO dash/rule stubs before kickers or captions — those are dead.
+   Two decorative devices: the kente strip (.kz-ticks) — a woven purple/silver
+   band along the bottom edge, in the house palette only — and the faint Adinkra
+   doodle field (.kz-doodles) on plum text pages: Adinkrahene, Dwennimmen (ram's
+   horns), Ananse Ntontan (spider's web), Akoma (heart), Dame Dame (checkers),
+   Gye Nyame, Sankofa (bird), Fawohodie (wheel), Aya (fern), Nyame Dua (tree),
+   and a nested diamond (Eban). */
+.kz-page{position:relative;box-sizing:border-box;background:var(--kz-field);color:var(--kz-ink);font-family:var(--kz-font-serif);display:flex;flex-direction:column;padding:var(--kz-margin-y) var(--kz-margin-x);overflow:hidden}
+.kz-page--cover{background:var(--kz-field-cover)}
+
+.kz-runhead{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:22px;border-bottom:1px solid var(--kz-hairline)}
+.kz-runhead-mast{font-family:var(--kz-font-serif);font-weight:700;font-size:var(--kz-type-masthead-run);letter-spacing:var(--kz-ls-run)}
+.kz-runhead-data{font-family:var(--kz-font-mono);font-size:var(--kz-type-data);letter-spacing:var(--kz-ls-data);color:var(--kz-silver)}
+
+.kz-kicker{font-family:var(--kz-font-mono);font-size:var(--kz-type-kicker);letter-spacing:var(--kz-ls-kicker);color:var(--kz-silver)}
+
+.kz-excerpt{font-family:var(--kz-font-serif);font-weight:400;line-height:1.16;letter-spacing:-0.012em;text-wrap:pretty}
+.kz-excerpt em,.kz-excerpt i{font-style:italic}
+.kz-excerpt--xl{font-size:var(--kz-type-excerpt-xl);line-height:1.1}
+.kz-excerpt--l{font-size:var(--kz-type-excerpt-l);line-height:1.14}
+.kz-excerpt--m{font-size:var(--kz-type-excerpt-m);line-height:1.18}
+.kz-excerpt--s{font-size:var(--kz-type-excerpt-s);line-height:1.3;letter-spacing:-0.008em}
+.kz-excerpt--panel{font-size:var(--kz-type-excerpt-panel);line-height:1.34;letter-spacing:-0.005em}
+
+.kz-standfirst{font-family:var(--kz-font-serif);font-style:italic;font-weight:400;font-size:var(--kz-type-standfirst);color:var(--kz-ink-2);text-wrap:pretty}
+.kz-footnote{font-family:var(--kz-font-serif);font-style:italic;font-size:var(--kz-type-footnote);line-height:1.3;color:var(--kz-ink-2);text-wrap:pretty}
+
+.kz-folio{display:flex;justify-content:space-between;align-items:baseline;padding-top:22px;border-top:1px solid var(--kz-hairline);font-family:var(--kz-font-mono);font-size:var(--kz-type-folio);letter-spacing:var(--kz-ls-folio);color:var(--kz-silver)}
+
+.kz-turnline{font-family:var(--kz-font-mono);font-size:23px;letter-spacing:0.1em;color:var(--kz-silver)}
+
+/* the house's smallest accent: every full stop in display type (titles, excerpts,
+   terminal words, standfirsts, CTAs) is silver. Wrap it: <span class="kz-stop">.</span> */
+.kz-stop{color:var(--kz-silver)}
+
+/* the kente strip — a woven purple/silver band along the bottom edge of every
+   finished page, quoting the cloth without leaving the house palette (field,
+   field-cover, field-deep, silver, silver-deep only — never a third hue). */
+.kz-ticks{position:absolute;left:0;right:0;bottom:0;height:14px;pointer-events:none;background:repeating-linear-gradient(90deg,var(--kz-field-deep) 0 18px,var(--kz-silver) 18px 23px,var(--kz-grade-wash) 23px 40px,var(--kz-silver-deep) 40px 46px,var(--kz-field-cover) 46px 61px,var(--kz-silver) 61px 64px,var(--kz-grade-wash) 64px 84px,var(--kz-silver-deep) 84px 90px)}
+
+/* the Adinkra doodle field — the essential eleven, drawn faithfully: Adinkrahene,
+   Dwennimmen, Ananse Ntontan (the spider's web — Kwaku Ananse, wisdom), Akoma,
+   Dame Dame, Gye Nyame, Sankofa, Fawohodie, Aya, Nyame Dua, and a nested diamond
+   (Eban). Faint (7%), silver only, on plum text pages. Do not add symbols; do
+   not raise the opacity. */
+.kz-doodles{position:absolute;inset:0;pointer-events:none;opacity:0.07;background-size:1000px 1000px;background-image:url(data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271000%27%20fill%3D%27none%27%20stroke%3D%27silver%27%20stroke-width%3D%273%27%3E%3Cg%20transform%3D%27translate%28150%2C150%29%20rotate%2810%29%27%3E%3Ccircle%20r%3D%2742%27%2F%3E%3Ccircle%20r%3D%2726%27%2F%3E%3Ccircle%20r%3D%2711%27%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%27translate%28560%2C150%29%27%20stroke-linecap%3D%27round%27%3E%3Cpath%20d%3D%27M-8%2C20%20C-8%2C4%20-22%2C-4%20-30%2C-16%20C-36%2C-25%20-28%2C-34%20-18%2C-30%20C-10%2C-27%20-8%2C-18%20-14%2C-14%27%2F%3E%3Cpath%20d%3D%27M8%2C20%20C8%2C4%2022%2C-4%2030%2C-16%20C36%2C-25%2028%2C-34%2018%2C-30%20C10%2C-27%208%2C-18%2014%2C-14%27%2F%3E%3Cpath%20d%3D%27M-8%2C20%20H8%27%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%27translate%28870%2C180%29%20rotate%2815%29%27%3E%3Cpath%20d%3D%27M0%2C-34%20A17%2C17%200%201%200%2017%2C-17%20M0%2C34%20A17%2C17%200%201%200%20-17%2C17%20M-34%2C0%20A17%2C17%200%201%200%20-17%2C-17%20M34%2C0%20A17%2C17%200%201%200%2017%2C17%27%2F%3E%3Cpath%20d%3D%27M0%2C-42%20V42%20M-42%2C0%20H42%20M-30%2C-30%20L30%2C30%20M-30%2C30%20L30%2C-30%27%20stroke-width%3D%271.5%27%2F%3E%3Ccircle%20r%3D%274%27%20fill%3D%27silver%27%20stroke%3D%27none%27%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%27translate%28160%2C440%29%20rotate%28-8%29%27%3E%3Cpath%20d%3D%27M0%2C42%20C-24%2C26%20-46%2C10%20-46%2C-14%20C-46%2C-36%20-24%2C-44%200%2C-24%20C24%2C-44%2046%2C-36%2046%2C-14%20C46%2C10%2024%2C26%200%2C42%20Z%27%2F%3E%3Ccircle%20cx%3D%27-24%27%20cy%3D%27-18%27%20r%3D%276%27%2F%3E%3Ccircle%20cx%3D%2724%27%20cy%3D%27-18%27%20r%3D%276%27%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%27translate%28560%2C450%29%20rotate%28-15%29%27%3E%3Ccircle%20r%3D%2736%27%2F%3E%3Crect%20x%3D%27-10%27%20y%3D%27-10%27%20width%3D%2720%27%20height%3D%2720%27%20fill%3D%27silver%27%20stroke%3D%27none%27%2F%3E%3Crect%20x%3D%27-30%27%20y%3D%27-10%27%20width%3D%2720%27%20height%3D%2720%27%2F%3E%3Crect%20x%3D%2710%27%20y%3D%27-10%27%20width%3D%2720%27%20height%3D%2720%27%2F%3E%3Crect%20x%3D%27-10%27%20y%3D%27-30%27%20width%3D%2720%27%20height%3D%2720%27%2F%3E%3Crect%20x%3D%27-10%27%20y%3D%2710%27%20width%3D%2720%27%20height%3D%2720%27%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%27translate%28870%2C470%29%20rotate%288%29%27%20stroke-linecap%3D%27round%27%3E%3Cpath%20d%3D%27M-6%2C30%20C-6%2C10%20-30%2C6%20-34%2C-10%20C-37%2C-24%20-24%2C-34%20-12%2C-26%20C-4%2C-20%20-6%2C-10%20-14%2C-8%27%2F%3E%3Cpath%20d%3D%27M6%2C30%20C6%2C10%2030%2C6%2034%2C-10%20C37%2C-24%2024%2C-34%2012%2C-26%20C4%2C-20%206%2C-10%2014%2C-8%27%2F%3E%3Ccircle%20r%3D%273%27%20fill%3D%27silver%27%20stroke%3D%27none%27%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%27translate%28170%2C700%29%20rotate%28-6%29%27%20stroke-linecap%3D%27round%27%3E%3Cellipse%20cx%3D%270%27%20cy%3D%2710%27%20rx%3D%2734%27%20ry%3D%2720%27%2F%3E%3Cpath%20d%3D%27M-20%2C-4%20C-30%2C-20%20-14%2C-38%204%2C-30%20C16%2C-25%2018%2C-14%208%2C-10%20C0%2C-7%20-4%2C-12%202%2C-16%27%2F%3E%3Ccircle%20cx%3D%276%27%20cy%3D%27-14%27%20r%3D%274%27%20fill%3D%27silver%27%20stroke%3D%27none%27%2F%3E%3Cpath%20d%3D%27M-14%2C28%20L-20%2C40%20M10%2C30%20L14%2C42%27%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%27translate%28560%2C720%29%27%20stroke-linecap%3D%27round%27%3E%3Ccircle%20r%3D%2736%27%2F%3E%3Ccircle%20r%3D%2710%27%20fill%3D%27silver%27%20stroke%3D%27none%27%2F%3E%3Cpath%20d%3D%27M0%2C-36%20V-46%20M0%2C36%20V46%20M-36%2C0%20H-46%20M36%2C0%20H46%20M-25%2C-25%20L-32%2C-32%20M25%2C-25%20L32%2C-32%20M-25%2C25%20L-32%2C32%20M25%2C25%20L32%2C32%27%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%27translate%28870%2C730%29%20rotate%28-10%29%27%20stroke-linecap%3D%27round%27%3E%3Cpath%20d%3D%27M-25%2C-15%20C-21%2C-31%205%2C-39%2019%2C-29%20C31%2C-20%2025%2C-5%2011%2C-7%27%2F%3E%3Cpath%20d%3D%27M25%2C15%20C21%2C31%20-5%2C39%20-19%2C29%20C-31%2C20%20-25%2C5%20-11%2C7%27%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%27translate%28320%2C900%29%20rotate%286%29%27%20stroke-linecap%3D%27round%27%3E%3Cpath%20d%3D%27M0%2C45%20V-45%20M0%2C-15%20C-12%2C-19%20-20%2C-29%20-20%2C-41%20M0%2C-15%20C12%2C-19%2020%2C-29%2020%2C-41%20M0%2C10%20C-14%2C6%20-24%2C-6%20-24%2C-20%20M0%2C10%20C14%2C6%2024%2C-6%2024%2C-20%20M0%2C-40%20C-8%2C-42%20-13%2C-49%20-13%2C-57%20M0%2C-40%20C8%2C-42%2013%2C-49%2013%2C-57%27%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%27translate%28760%2C920%29%20rotate%2814%29%27%3E%3Cpath%20d%3D%27M0%2C-40%20L36%2C0%20L0%2C40%20L-36%2C0%20Z%27%2F%3E%3Cpath%20d%3D%27M0%2C-22%20L18%2C0%20L0%2C22%20L-18%2C0%20Z%27%2F%3E%3Ccircle%20r%3D%274%27%20fill%3D%27silver%27%20stroke%3D%27none%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E)}
+
+/* the house grade — wrap any photograph */
+.kz-grade{position:relative;filter:var(--kz-grade-filter)}
+.kz-grade::before{content:"";position:absolute;inset:0;pointer-events:none;background:var(--kz-grade-lift);opacity:0.16;mix-blend-mode:lighten;z-index:1}
+.kz-grade::after{content:"";position:absolute;inset:0;pointer-events:none;background:var(--kz-grade-wash);mix-blend-mode:soft-light;opacity:0.6;z-index:1}
+.kz-grade>img{display:block;width:100%;height:100%;object-fit:cover}
+
+/* film grain — absolute overlay child of a positioned page */
+.kz-grain{position:absolute;inset:0;pointer-events:none;mix-blend-mode:overlay;opacity:var(--kz-grain-opacity);background-image:url(data:image/svg+xml;utf8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22240%22%20height=%22240%22%3E%3Cfilter%20id=%22n%22%3E%3CfeTurbulence%20type=%22fractalNoise%22%20baseFrequency=%220.55%22%20numOctaves=%223%22/%3E%3C/filter%3E%3Crect%20width=%22240%22%20height=%22240%22%20filter=%22url(%23n)%22/%3E%3C/svg%3E)}
+
+/* paper mode — flip a surface to the light layer */
+.kz-paper-mode{background:var(--kz-paper);color:var(--kz-paper-ink)}
+.kz-paper-mode .kz-runhead-data,.kz-paper-mode .kz-kicker,.kz-paper-mode .kz-folio{color:var(--kz-paper-dim)}
+.kz-paper-mode .kz-runhead{border-bottom-color:var(--kz-paper-hairline)}
+.kz-paper-mode .kz-folio{border-top-color:var(--kz-paper-hairline)}
+.kz-paper-mode .kz-turnline,.kz-paper-mode .kz-runhead-data,.kz-paper-mode .kz-kicker,.kz-paper-mode .kz-folio{color:var(--kz-silver-ink)}
+.kz-paper-mode .kz-standfirst,.kz-paper-mode .kz-footnote{color:var(--kz-paper-ink)}

@@ -1,0 +1,40 @@
+/* Kayz Island — colour. The manuscript's ink and thread. OKLCH throughout.
+   LAW: purple is ink only. The thread accent is SILVER. Thread is NEVER running text,
+   never a field. One richer cover moment per artefact is the ceiling. */
+:root{
+  /* field layer — dark grounds. #251131 is the Substack purple, verbatim. */
+  --kz-field: #251131;        /* page ground; reads black at thumb speed */
+  --kz-field-cover: #2e1540;   /* cover + closer only */
+  --kz-field-deep: #1a0b24;    /* panels and scrims over photographs */
+
+  /* ink layer — on field */
+  --kz-ink: oklch(0.94 0.012 315);           /* speaking text */
+  --kz-ink-2: oklch(0.82 0.025 315);         /* standfirsts, secondary voice */
+  --kz-dim: oklch(0.68 0.03 315);            /* folios, running-head data, marginalia */
+  --kz-hairline: oklch(0.94 0.012 315 / 0.18);
+  --kz-hairline-strong: oklch(0.94 0.012 315 / 0.35);
+
+  /* silver — THE accent (#c0c0c0, the Substack accent, verbatim), layered by job
+     as gold is at The Renaissance. Silver carries ALL furniture: running-head data,
+     kickers, folios, turn-lines, ticks. */
+  --kz-silver: #c0c0c0;        /* bright silver — fills, ticks, accent on dark */
+  --kz-silver-deep: #85858d;   /* working silver — rules, dim ticks. NEVER text on paper */
+  --kz-silver-ink: #5d5d66;     /* silver as readable text on paper */
+  --kz-thread: var(--kz-silver);             /* legacy alias — do not use in new work */
+
+  /* paper layer — light artefacts (print, light-platform surfaces) */
+  --kz-paper: oklch(0.965 0.008 315);
+  --kz-paper-ink: oklch(0.24 0.03 315);
+  --kz-paper-dim: oklch(0.47 0.028 315);
+  --kz-paper-thread: var(--kz-silver-ink);   /* legacy alias */
+  --kz-paper-hairline: oklch(0.24 0.03 315 / 0.2);
+
+  /* semantic aliases */
+  --surface-page: var(--kz-field);
+  --surface-cover: var(--kz-field-cover);
+  --surface-panel: var(--kz-field-deep);
+  --text-body: var(--kz-ink);
+  --text-standfirst: var(--kz-ink-2);
+  --text-meta: var(--kz-dim);
+  --accent-thread: var(--kz-silver);
+}

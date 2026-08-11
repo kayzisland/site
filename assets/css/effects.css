@@ -1,0 +1,9 @@
+/* Kayz Island — finish. The house grade lands any film-toned frame on-system. */
+:root{
+  --kz-grade-filter: saturate(0.84) contrast(0.97); /* @kind other */
+  --kz-grade-wash: oklch(0.34 0.07 315);   /* soft-light @ 60% */
+  --kz-grade-lift: oklch(0.2 0.035 315);   /* lighten @ 16% — plum shadow lift */
+  --kz-grain-opacity: 0.16; /* @kind other */
+  --kz-scrim-top: linear-gradient(oklch(0.13 0.025 315 / 0.7), transparent); /* @kind color */
+  --kz-scrim-bottom: linear-gradient(transparent, oklch(0.13 0.025 315 / 0.86) 36%, oklch(0.13 0.025 315 / 0.97)); /* @kind color */
+}

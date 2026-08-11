@@ -1,0 +1,5 @@
+/* Kayz Island — base resets. */
+body{margin:0;background:var(--kz-field);color:var(--kz-ink);font-family:var(--kz-font-serif);font-optical-sizing:auto}
+a{color:var(--kz-thread);text-decoration:underline;text-underline-offset:0.14em}
+a:hover{color:oklch(0.86 0.06 305)}
+::selection{background:oklch(0.74 0.08 305 / 0.35)}

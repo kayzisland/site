@@ -1,0 +1,9 @@
+/* Kayz Island — the page geometry (1080-wide canvas). */
+:root{
+  --kz-margin-x: 84px;      /* page side margins */
+  --kz-margin-y: 76px;      /* page top/bottom margins */
+  --kz-kicker-drop: 130px;  /* running head → excerpt drop on a typeset spread */
+  --kz-stack: 36px;         /* heading → excerpt */
+  --kz-plate-h: 560px;      /* inset plate height on a 1350 page */
+  --kz-ticks-h: 14px;       /* the kente strip along the bottom edge */
+}
