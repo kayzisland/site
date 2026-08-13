@@ -18,6 +18,8 @@ a:hover{color:var(--kz-silver)}
 .hl-row{scrollbar-width:none} .hl-row::-webkit-scrollbar{display:none}
 .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 @media (prefers-reduced-motion: reduce){.hero-video{display:none}}
-.substack-post-embed{background:var(--kz-field-cover);padding:26px 26px 22px;border-top:1px solid var(--kz-hairline-strong)}
-.substack-post-embed p{margin:0 0 16px;font-family:var(--kz-font-serif);font-weight:800;font-size:21px;line-height:1.2;color:var(--kz-ink)}
-.substack-post-embed a{font-family:var(--kz-font-grotesk);font-size:11px;letter-spacing:0.18em;color:var(--kz-silver)}
+.kz-placeholder{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;background:var(--kz-field);border:1px dashed var(--kz-hairline-strong);color:var(--kz-dim);font-family:var(--kz-font-grotesk);font-size:10.5px;letter-spacing:0.2em;text-align:center;padding:20px}
+.kz-stanza{border-top:1px solid var(--kz-hairline-strong);padding-top:22px}
+.kz-stanza .kz-kicker{font-size:10.5px;margin-bottom:14px}
+.kz-stanza p{margin:0;font-family:var(--kz-font-serif);font-style:italic;line-height:1.42;text-wrap:pretty}
+.kz-stanza .cta-dim{display:inline-block;margin-top:18px}
