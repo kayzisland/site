@@ -18,3 +18,6 @@ a:hover{color:var(--kz-silver)}
 .hl-row{scrollbar-width:none} .hl-row::-webkit-scrollbar{display:none}
 .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 @media (prefers-reduced-motion: reduce){.hero-video{display:none}}
+.substack-post-embed{background:var(--kz-field-cover);padding:26px 26px 22px;border-top:1px solid var(--kz-hairline-strong)}
+.substack-post-embed p{margin:0 0 16px;font-family:var(--kz-font-serif);font-weight:800;font-size:21px;line-height:1.2;color:var(--kz-ink)}
+.substack-post-embed a{font-family:var(--kz-font-grotesk);font-size:11px;letter-spacing:0.18em;color:var(--kz-silver)}
