@@ -3,10 +3,15 @@
   --kz-field:#1A1220; --kz-field-cover:#241A2E; --kz-field-deep:#120B18;
   --kz-silver:#C7C7D2; --kz-accent:#CBB3DE;
 }
-html{scroll-behavior:smooth}
 body{margin:0;background:var(--kz-field-deep);color:var(--kz-ink);font-family:var(--kz-font-serif)}
+h1,h2,h3{text-wrap:balance}
 a{color:var(--kz-ink);text-decoration:none}
+a,button{transition:color .18s cubic-bezier(0.25,1,0.5,1),border-color .18s cubic-bezier(0.25,1,0.5,1)}
 a:hover{color:var(--kz-silver)}
+:focus-visible{outline:2px solid var(--kz-accent);outline-offset:3px}
+.nav-link,.foot-link{padding:8px 0;margin:-8px 0}
+@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
+@media (prefers-reduced-motion: reduce){a,button{transition:none}}
 ::selection{background:var(--kz-silver);color:#120B18}
 .nav-link{color:var(--kz-dim)} .nav-link:hover{color:var(--kz-silver)}
 .nav-link.active{color:var(--kz-silver)}
