@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fashion · The Lookbook | KAYZ ISLAND</title>
-<meta name="description" content="Sixteen shoots from an archive of 802 frames. Film tones, grain, no retouching worth mentioning. Agency, editorial and brand bookings.">
+<title>Fashion · The Gallery | KAYZ ISLAND</title>
+<meta name="description" content="Creative direction, styling and the face, same person. Agency, editorial and brand bookings.">
 <meta property="og:title" content="FASHION · KAYZ ISLAND">
-<meta property="og:description" content="The lookbook. Sixteen shoots from an archive of 802 frames.">
+<meta property="og:description" content="The gallery. Sixteen shoots and the singles, from an archive of 802 frames.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kayzisland.com/fashion.html">
 <meta name="twitter:card" content="summary_large_image">
@@ -19,6 +19,34 @@
 <link rel="stylesheet" href="assets/css/patterns.css">
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/site.css">
+<style>
+  .gal{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:clamp(80px,9vw,140px);gap:clamp(10px,1.6vw,22px);grid-auto-flow:dense}
+  .gal figure{margin:0;display:flex;flex-direction:column;gap:8px}
+  .gal .kz-grade{flex:1;min-height:0}
+  .gal img{width:100%;height:100%;object-fit:cover;display:block}
+  .gal figcaption{min-height:16px;font-family:var(--kz-font-grotesk);font-size:10.5px;letter-spacing:0.18em;color:var(--kz-silver)}
+  .t-lead{grid-column:span 3;grid-row:span 4}
+  .t-tall{grid-column:span 2;grid-row:span 4}
+  .t-sq{grid-column:span 2;grid-row:span 3}
+  .t-wide{grid-column:span 4;grid-row:span 3}
+  .t-big{grid-column:span 4;grid-row:span 5}
+  .t-spread{grid-column:span 6;grid-row:span 3}
+  .t-glaze{grid-column:span 2;grid-row:span 2;display:flex;flex-direction:column;justify-content:center;gap:10px;border-top:1px solid var(--kz-hairline-strong);padding-top:14px}
+  .t-glaze p{margin:0;font-family:var(--kz-font-serif);font-style:italic;font-size:clamp(15px,1.7vw,19px);line-height:1.4;text-wrap:pretty}
+  .t-glaze div{font-family:var(--kz-font-grotesk);font-size:10px;letter-spacing:0.18em;color:var(--kz-silver)}
+  .t-wide img,.t-spread img{object-position:50% 28%}
+  @media (max-width:720px){
+    .gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:auto;grid-auto-flow:row dense}
+    .gal figure,.gal .t-glaze{grid-row:auto}
+    .t-lead,.t-wide,.t-glaze,.t-big,.t-spread{grid-column:span 2}
+    .t-tall,.t-sq{grid-column:span 1}
+    .gal .kz-grade{flex:none}
+    .t-lead .kz-grade,.t-big .kz-grade{aspect-ratio:4/5}
+    .t-tall .kz-grade,.t-sq .kz-grade{aspect-ratio:3/4}
+    .t-wide .kz-grade,.t-spread .kz-grade{aspect-ratio:16/10}
+    .t-glaze{padding:18px 0 10px}
+  }
+</style>
 </head>
 <body>
 <div style="position:relative;min-height:100vh;background:var(--kz-field-deep);color:var(--kz-ink);font-family:var(--kz-font-serif);display:flex;flex-direction:column;overflow:hidden">
@@ -38,9 +66,9 @@
   </header>
 
   <section style="position:relative;padding:clamp(56px,9vh,110px) clamp(20px,5vw,72px) clamp(40px,6vh,70px)">
-    <div class="kz-kicker" style="font-size:12px;margin-bottom:22px;color:var(--kz-accent)">FASHION · LOOKBOOK</div>
-    <h1 style="margin:0;max-width:900px;font-family:var(--kz-font-serif);font-weight:800;font-size:clamp(40px,7.5vw,92px);line-height:1.02;letter-spacing:-0.015em">The lookbook<span class="kz-stop">.</span></h1>
-    <p class="kz-standfirst" style="font-size:clamp(16px,2.2vw,19px);max-width:640px;margin:26px 0 0">Sixteen shoots from an archive of 802 frames. Film tones, grain, no retouching worth mentioning.</p>
+    <div class="kz-kicker" style="font-size:12px;margin-bottom:22px;color:var(--kz-accent)">FASHION · #PROFESSIONALFINEBOY</div>
+    <h1 style="margin:0;max-width:900px;font-family:var(--kz-font-serif);font-weight:800;font-size:clamp(40px,7.5vw,92px);line-height:1.02;letter-spacing:-0.015em">The gallery<span class="kz-stop">.</span></h1>
+    <p class="kz-standfirst" style="font-size:clamp(16px,2.2vw,19px);max-width:640px;margin:26px 0 0">Creative direction, styling and the face, same person.</p>
     <div style="max-width:720px;margin-top:clamp(30px,5vh,44px);padding-top:clamp(22px,3.5vh,32px);border-top:1px solid var(--kz-hairline)">
       <p style="margin:0;font-family:var(--kz-font-serif);font-style:italic;font-size:clamp(18px,2.8vw,24px);line-height:1.35">"This fit is dangerous, what the heck<span class="kz-stop">.</span>"</p>
       <div style="font-family:var(--kz-font-grotesk);font-size:11px;letter-spacing:0.18em;color:var(--kz-silver);margin-top:14px">@IMMORTALBOMO</div>
@@ -48,88 +76,267 @@
   </section>
 
   <section style="position:relative;padding:0 clamp(20px,5vw,72px) clamp(56px,9vh,110px)">
-    <div style="font-family:var(--kz-font-grotesk);font-size:10px;letter-spacing:0.2em;color:var(--kz-dim);margin-bottom:18px">SHOOT NAMES PROVISIONAL · RENAMING IN PROGRESS</div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:clamp(24px,3.5vw,40px) clamp(12px,2vw,24px)">
-      <div>
-        <!-- TODO MEDIA FILL: media/shoot-blame-the-accent.jpg -->
-        <div class="kz-placeholder" style="height:clamp(300px,44vw,460px)">SHOOT</div>
-        <div style="font-family:var(--kz-font-grotesk);font-size:10.5px;letter-spacing:0.18em;color:var(--kz-silver);margin-top:10px">BLAME THE ACCENT</div>
+    <!-- ordered: features (top social performers), then carousels by recency, then singles and campaigns.
+         retro-rugby-court pending hi-res recovery from Photos -->
+    <div class="gal">
+      <figure class="t-big">
+        <div class="kz-grade"><img src="media/shoot-goalaso.jpg" alt="KAYZ standing at a signpost on a London street in olive cargos" loading="lazy"></div>
+        <figcaption><!-- shoot name, KAYZ to fill --></figcaption>
+      </figure>
+      <figure class="t-big">
+        <div class="kz-grade"><img src="media/shoot-sex-symbol-01.jpg" alt="White long sleeve and printed trousers in a parking garage" loading="lazy"></div>
+        <figcaption><!-- shoot name, KAYZ to fill --></figcaption>
+      </figure>
+      <div class="t-glaze">
+        <p>"Ngl u might wanna go all in in this modelling shit bro ur made for that brotha"</p>
       </div>
-      <div>
-        <!-- TODO MEDIA FILL: media/shoot-stay-free.jpg -->
-        <div class="kz-placeholder" style="height:clamp(300px,44vw,460px)">SHOOT</div>
-        <div style="font-family:var(--kz-font-grotesk);font-size:10.5px;letter-spacing:0.18em;color:var(--kz-silver);margin-top:10px">STAY FREE</div>
+      <figure class="t-big">
+        <div class="kz-grade"><img src="media/fash-pink-smoke.jpg" alt="Pink hood in pink smoke" loading="lazy"></div>
+        <figcaption><!-- shoot name, KAYZ to fill --></figcaption>
+      </figure>
+      <figure class="t-lead">
+        <div class="kz-grade"><img src="media/shoot-stay-free.jpg" alt="KAYZ in a headwrap at the pyramids of Giza at golden hour" loading="lazy"></div>
+        <figcaption><!-- shoot name, KAYZ to fill --></figcaption>
+      </figure>
+      <figure class="t-tall">
+        <div class="kz-grade"><img src="media/shoot-stay-free-05.jpg" alt="Walking the desert road, pyramids behind" loading="lazy"></div>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/shoot-stay-free-02.jpg" alt="KAYZ shirtless on a villa balcony, dog tag catching the light" loading="lazy"></div>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/shoot-stay-free-04.jpg" alt="Wicker chair on the balcony, blue water behind" loading="lazy"></div>
+      </figure>
+      <div class="t-glaze">
+        <p>"Can feel the aura through the screen"</p>
+        <div>DBK · DIASPORA</div>
       </div>
-      <div>
-        <!-- TODO MEDIA FILL: media/shoot-renaissance-in-motion.jpg -->
-        <div class="kz-placeholder" style="height:clamp(300px,44vw,460px)">SHOOT</div>
-        <div style="font-family:var(--kz-font-grotesk);font-size:10.5px;letter-spacing:0.18em;color:var(--kz-silver);margin-top:10px">RENAISSANCE IN MOTION</div>
+      <figure class="t-lead">
+        <div class="kz-grade"><img src="media/shoot-renaissance-in-motion.jpg" alt="KAYZ in a red check shirt leaning on a bike by a brick wall" loading="lazy"></div>
+        <figcaption><!-- shoot name, KAYZ to fill --></figcaption>
+      </figure>
+      <figure class="t-tall">
+        <div class="kz-grade"><img src="media/fash-dreads-portrait.jpg" alt="Close portrait, locs across the face" loading="lazy"></div>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/shoot-renaissance-in-motion-02.jpg" alt="Stone Island crouch by a stream" loading="lazy"></div>
+      </figure>
+      <figure class="t-tall">
+        <div class="kz-grade"><img src="media/shoot-renaissance-in-motion-06.jpg" alt="Leather jacket in the valley" loading="lazy"></div>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/shoot-renaissance-in-motion-04.jpg" alt="Check shirts by the brick shed and orange trolley" loading="lazy"></div>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/shoot-renaissance-in-motion-05.jpg" alt="Three at the estate railing in red caps" loading="lazy"></div>
+      </figure>
+      <figure class="t-tall">
+        <div class="kz-grade"><img src="media/fash-dreads-sky.jpg" alt="Locs against an open sky" loading="lazy"></div>
+      </figure>
+      <figure class="t-lead">
+        <div class="kz-grade"><img src="media/shoot-blame-the-accent.jpg" alt="KAYZ in a black vest and shorts on a Miami street, arms crossed" loading="lazy"></div>
+        <figcaption><!-- shoot name, KAYZ to fill --></figcaption>
+      </figure>
+      <figure class="t-tall">
+        <div class="kz-grade"><img src="media/shoot-blame-the-accent-02.jpg" alt="KAYZ in a yellow crochet shirt and brown fitted cap" loading="lazy"></div>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/shoot-blame-the-accent-03.jpg" alt="Profile in a red cap and striped rugby collar" loading="lazy"></div>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/shoot-blame-the-accent-04.jpg" alt="64 jersey and denim shorts on the sea wall" loading="lazy"></div>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/shoot-blame-the-accent-05.jpg" alt="Under the club lights in white" loading="lazy"></div>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/shoot-blame-the-accent-06.jpg" alt="The fragrance and watch flat lay" loading="lazy"></div>
+      </figure>
+      <div class="t-glaze">
+        <p>"Honestly your carousel fit pics are tuff"</p>
+        <div>PRIVACY™</div>
       </div>
-      <div>
-        <!-- TODO MEDIA FILL: media/shoot-double-vision.jpg -->
-        <div class="kz-placeholder" style="height:clamp(300px,44vw,460px)">SHOOT</div>
-        <div style="font-family:var(--kz-font-grotesk);font-size:10.5px;letter-spacing:0.18em;color:var(--kz-silver);margin-top:10px">DOUBLE VISION</div>
+      <figure class="t-lead">
+        <div class="kz-grade"><img src="media/shoot-bare-grillz.jpg" alt="KAYZ seated on a snowy outcrop in a fleece and beanie" loading="lazy"></div>
+        <figcaption><!-- shoot name, KAYZ to fill --></figcaption>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/shoot-bare-grillz-02.jpg" alt="Winter layers and goggles, posed in the snow" loading="lazy"></div>
+      </figure>
+      <figure class="t-tall">
+        <div class="kz-grade"><img src="media/shoot-bare-grillz-04.jpg" alt="Perched on the rocks above the valley" loading="lazy"></div>
+      </figure>
+      <figure class="t-tall">
+        <div class="kz-grade"><img src="media/shoot-sex-symbol-02.jpg" alt="Leaning at the pillar, printed trousers full length" loading="lazy"></div>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/shoot-sex-symbol-03.jpg" alt="Back print of the trousers between concrete columns" loading="lazy"></div>
+      </figure>
+      <figure class="t-lead">
+        <div class="kz-grade"><img src="media/shoot-organised-chaos.jpg" alt="KAYZ leaning in a corner-shop doorway in black" loading="lazy"></div>
+        <figcaption><!-- shoot name, KAYZ to fill --></figcaption>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/shoot-organised-chaos-02.jpg" alt="DOLLAZ MAKE SENSE tee, seated pair with holdall" loading="lazy"></div>
+      </figure>
+      <figure class="t-tall">
+        <div class="kz-grade"><img src="media/shoot-organised-chaos-03.jpg" alt="Leather and hood pair under a shopfront" loading="lazy"></div>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/shoot-organised-chaos-04.jpg" alt="Brown zip-up, hands clasped" loading="lazy"></div>
+      </figure>
+      <div class="t-glaze">
+        <p>"u got that appearance and vibe for it without even trying that hard"</p>
+        <div>ALMOSTED</div>
       </div>
-      <div>
-        <!-- TODO MEDIA FILL: media/shoot-bare-grillz.jpg -->
-        <div class="kz-placeholder" style="height:clamp(300px,44vw,460px)">SHOOT</div>
-        <div style="font-family:var(--kz-font-grotesk);font-size:10.5px;letter-spacing:0.18em;color:var(--kz-silver);margin-top:10px">BARE GRILLZ</div>
+      <figure class="t-lead">
+        <div class="kz-grade"><img src="media/shoot-preppy-pimpin-01.jpg" alt="Fur hood on a night bench, streetlight glow" loading="lazy"></div>
+        <figcaption><!-- shoot name, KAYZ to fill --></figcaption>
+      </figure>
+      <figure class="t-tall">
+        <div class="kz-grade"><img src="media/shoot-preppy-pimpin-02.jpg" alt="Crossing the road at night in the fur hood" loading="lazy"></div>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/shoot-preppy-pimpin-03.jpg" alt="Perched on the rail under the billboard" loading="lazy"></div>
+      </figure>
+      <figure class="t-lead">
+        <div class="kz-grade"><img src="media/shoot-sakura.jpg" alt="KAYZ in a pink graphic knit against a city street" loading="lazy"></div>
+        <figcaption><!-- shoot name, KAYZ to fill --></figcaption>
+      </figure>
+      <figure class="t-tall">
+        <div class="kz-grade"><img src="media/shoot-sakura-02.jpg" alt="Back print of the sakura knit against the Berlin wall" loading="lazy"></div>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/shoot-sakura-03.jpg" alt="Blossom-embroidered denim over a white Air Force" loading="lazy"></div>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/shoot-sakura-04.jpg" alt="Arms crossed at the painted wall" loading="lazy"></div>
+      </figure>
+      <div class="t-glaze">
+        <p>"Bro teach us how to be this steezy mannnn"</p>
       </div>
-      <div>
-        <!-- TODO MEDIA FILL: media/shoot-organised-chaos.jpg -->
-        <div class="kz-placeholder" style="height:clamp(300px,44vw,460px)">SHOOT</div>
-        <div style="font-family:var(--kz-font-grotesk);font-size:10.5px;letter-spacing:0.18em;color:var(--kz-silver);margin-top:10px">ORGANISED CHAOS</div>
+      <figure class="t-lead">
+        <div class="kz-grade"><img src="media/shoot-inevitable.jpg" alt="KAYZ in an American football jersey and helmet under night light" loading="lazy"></div>
+        <figcaption><!-- shoot name, KAYZ to fill --></figcaption>
+      </figure>
+      <figure class="t-tall">
+        <div class="kz-grade"><img src="media/shoot-inevitable-02.jpg" alt="Full pads, number 14, floodlit dark" loading="lazy"></div>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/shoot-inevitable-04.jpg" alt="The crimson lion helmet, close" loading="lazy"></div>
+      </figure>
+      <figure class="t-lead">
+        <div class="kz-grade"><img src="media/shoot-da-gulliest.jpg" alt="KAYZ reclined on a leather sofa in an olive puffer" loading="lazy"></div>
+        <figcaption><!-- shoot name, KAYZ to fill --></figcaption>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/shoot-da-gulliest-02.jpg" alt="Trainer resting on the LIVE FAST DY holdall" loading="lazy"></div>
+      </figure>
+      <figure class="t-tall">
+        <div class="kz-grade"><img src="media/shoot-da-gulliest-03.jpg" alt="KAYZ in the mirrored fitting room, neon sign behind" loading="lazy"></div>
+      </figure>
+      <figure class="t-tall">
+        <div class="kz-grade"><img src="media/shoot-da-gulliest-05.jpg" alt="Standing full length under the LIVE FAST neon" loading="lazy"></div>
+      </figure>
+      <div class="t-glaze">
+        <p>"I think you lot are gonna be my reoccurring models like the faces I'm always gonna use"</p>
+        <div>@WHERESYASIIN</div>
       </div>
-      <div>
-        <!-- TODO MEDIA FILL: media/shoot-sakura.jpg -->
-        <div class="kz-placeholder" style="height:clamp(300px,44vw,460px)">SHOOT</div>
-        <div style="font-family:var(--kz-font-grotesk);font-size:10.5px;letter-spacing:0.18em;color:var(--kz-silver);margin-top:10px">SAKURA</div>
+      <figure class="t-lead">
+        <div class="kz-grade"><img src="media/shoot-double-vision.jpg" alt="KAYZ in a striped rugby shirt and white hat against a pitch fence" loading="lazy"></div>
+        <figcaption><!-- shoot name, KAYZ to fill --></figcaption>
+      </figure>
+      <figure class="t-tall">
+        <div class="kz-grade"><img src="media/shoot-double-vision-02.jpg" alt="Leather pair in black and white outside a dark door" loading="lazy"></div>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/shoot-double-vision-07.jpg" alt="Rugby shirts in the diner booth" loading="lazy"></div>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/shoot-double-vision-05.jpg" alt="Rugby shirts and a phone check on the park bench" loading="lazy"></div>
+      </figure>
+      <figure class="t-tall">
+        <div class="kz-grade"><img src="media/shoot-double-vision-08.jpg" alt="Pink leopard hoodie pair on the steps" loading="lazy"></div>
+      </figure>
+      <figure class="t-spread">
+        <div class="kz-grade"><img src="media/fash-bw-duo.jpg" alt="Black and white pair against slatted shutters" loading="lazy"></div>
+      </figure>
+      <figure class="t-lead">
+        <div class="kz-grade"><img src="media/shoot-motion-sick-01.jpg" alt="Pink tracksuit and flag in the smoke on the caged pitch" loading="lazy"></div>
+        <figcaption><!-- shoot name, KAYZ to fill --></figcaption>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/fash-salmon-court.jpg" alt="Salmon zip-up at the cage" loading="lazy"></div>
+      </figure>
+      <figure class="t-lead">
+        <div class="kz-grade"><img src="media/shoot-bite-me-01.jpg" alt="Black on black on the leather couch against white brick" loading="lazy"></div>
+        <figcaption><!-- shoot name, KAYZ to fill --></figcaption>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/shoot-bite-me-02.jpg" alt="Slouched wide on the couch, cap low" loading="lazy"></div>
+      </figure>
+      <figure class="t-tall">
+        <div class="kz-grade"><img src="media/shoot-goalaso-02.jpg" alt="KAYZ seated on a bollard, cargos and white trainers" loading="lazy"></div>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/shoot-goalaso-03.jpg" alt="KAYZ against a graffiti wall in white and olive" loading="lazy"></div>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/shoot-goalaso-04.jpg" alt="Belt buckle and cargo detail, arms crossed" loading="lazy"></div>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/shoot-goalaso-05.jpg" alt="White trainer on concrete, cargo hem detail" loading="lazy"></div>
+      </figure>
+      <div class="t-glaze">
+        <p>"The reason I'm modelling for this brand is cos u wore the trackie one time"</p>
       </div>
-      <div>
-        <!-- TODO MEDIA FILL: media/shoot-inevitable.jpg -->
-        <div class="kz-placeholder" style="height:clamp(300px,44vw,460px)">SHOOT</div>
-        <div style="font-family:var(--kz-font-grotesk);font-size:10.5px;letter-spacing:0.18em;color:var(--kz-silver);margin-top:10px">INEVITABLE</div>
-      </div>
-      <div>
-        <!-- TODO MEDIA FILL: media/shoot-da-gulliest.jpg -->
-        <div class="kz-placeholder" style="height:clamp(300px,44vw,460px)">SHOOT</div>
-        <div style="font-family:var(--kz-font-grotesk);font-size:10.5px;letter-spacing:0.18em;color:var(--kz-silver);margin-top:10px">DA GULLIEST</div>
-      </div>
-      <div>
-        <!-- TODO MEDIA FILL: media/shoot-goalaso.jpg -->
-        <div class="kz-placeholder" style="height:clamp(300px,44vw,460px)">SHOOT</div>
-        <div style="font-family:var(--kz-font-grotesk);font-size:10.5px;letter-spacing:0.18em;color:var(--kz-silver);margin-top:10px">GOALASO</div>
-      </div>
-      <div>
-        <!-- TODO MEDIA FILL: media/shoot-vanilla-sixtyfour.jpg -->
-        <div class="kz-placeholder" style="height:clamp(300px,44vw,460px)">SHOOT</div>
-        <div style="font-family:var(--kz-font-grotesk);font-size:10.5px;letter-spacing:0.18em;color:var(--kz-silver);margin-top:10px">VANILLA 64 JERSEY</div>
-      </div>
-      <div>
-        <!-- TODO MEDIA FILL: media/shoot-vanilla-whites-timbs.jpg -->
-        <div class="kz-placeholder" style="height:clamp(300px,44vw,460px)">SHOOT</div>
-        <div style="font-family:var(--kz-font-grotesk);font-size:10.5px;letter-spacing:0.18em;color:var(--kz-silver);margin-top:10px">VANILLA WHITES</div>
-      </div>
-      <div>
-        <!-- TODO MEDIA FILL: media/shoot-pgwv-tee.jpg -->
-        <div class="kz-placeholder" style="height:clamp(300px,44vw,460px)">SHOOT</div>
-        <div style="font-family:var(--kz-font-grotesk);font-size:10.5px;letter-spacing:0.18em;color:var(--kz-silver);margin-top:10px">PGWV TEE</div>
-      </div>
-      <div>
-        <!-- TODO MEDIA FILL: media/shoot-studio-editorial.jpg -->
-        <div class="kz-placeholder" style="height:clamp(300px,44vw,460px)">SHOOT</div>
-        <div style="font-family:var(--kz-font-grotesk);font-size:10.5px;letter-spacing:0.18em;color:var(--kz-silver);margin-top:10px">STUDIO EDITORIAL</div>
-      </div>
-      <div>
-        <!-- TODO MEDIA FILL: media/shoot-camo-duo.jpg -->
-        <div class="kz-placeholder" style="height:clamp(300px,44vw,460px)">SHOOT</div>
-        <div style="font-family:var(--kz-font-grotesk);font-size:10.5px;letter-spacing:0.18em;color:var(--kz-silver);margin-top:10px">CAMO DUO</div>
-      </div>
-      <div>
-        <!-- TODO MEDIA FILL: media/shoot-thobe-editorial.jpg -->
-        <div class="kz-placeholder" style="height:clamp(300px,44vw,460px)">SHOOT</div>
-        <div style="font-family:var(--kz-font-grotesk);font-size:10.5px;letter-spacing:0.18em;color:var(--kz-silver);margin-top:10px">THOBE EDITORIAL</div>
-      </div>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/fash-white-hoodie-graffiti.jpg" alt="White hoodie against a graffiti wall" loading="lazy"></div>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/fash-doorway-bat.jpg" alt="Doorway stance, bat in hand" loading="lazy"></div>
+      </figure>
+      <figure class="t-tall">
+        <div class="kz-grade"><img src="media/fash-brick-bike-flannel.jpg" alt="Flannel and bike against the brick" loading="lazy"></div>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/fash-grey-hood-car.jpg" alt="Grey hood by the car at dusk" loading="lazy"></div>
+      </figure>
+      <figure class="t-tall">
+        <div class="kz-grade"><img src="media/fash-italia-jersey.jpg" alt="Italia jersey on a night street" loading="lazy"></div>
+      </figure>
+      <figure class="t-lead">
+        <div class="kz-grade"><img src="media/shoot-camo-duo.jpg" alt="Camo duo pair facing each other against slatted shutters" loading="lazy"></div>
+        <figcaption><!-- shoot name, KAYZ to fill --></figcaption>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/shoot-camo-duo-02.jpg" alt="Camo duo sharing a laugh" loading="lazy"></div>
+      </figure>
+      <figure class="t-lead">
+        <div class="kz-grade"><img src="media/shoot-pgwv-tee.jpg" alt="KAYZ in the PGWV tee against a white wall" loading="lazy"></div>
+        <figcaption><!-- shoot name, KAYZ to fill --></figcaption>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/shoot-pgwv-tee-02.jpg" alt="PGWV tee against corrugated black" loading="lazy"></div>
+      </figure>
+      <figure class="t-lead">
+        <div class="kz-grade"><img src="media/shoot-vanilla-sixtyfour.jpg" alt="The Vanilla jersey from the back, script across the shoulders" loading="lazy"></div>
+        <figcaption><!-- shoot name, KAYZ to fill --></figcaption>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/shoot-vanilla-sixtyfour-02.jpg" alt="Number 64 jersey, open stance at a stone wall" loading="lazy"></div>
+      </figure>
+      <figure class="t-tall">
+        <div class="kz-grade"><img src="media/shoot-vanilla-whites-timbs.jpg" alt="KAYZ in all white with Timberlands, seated on a bench" loading="lazy"></div>
+        <figcaption><!-- shoot name, KAYZ to fill --></figcaption>
+      </figure>
+      <figure class="t-sq">
+        <div class="kz-grade"><img src="media/shoot-vanilla-whites-timbs-02.jpg" alt="Vanilla shorts and Timberlands at a rail" loading="lazy"></div>
+      </figure>
+      <figure class="t-big">
+        <div class="kz-grade"><img src="media/shoot-thobe-editorial.jpg" alt="Cream keffiyeh portrait in black and white" loading="lazy"></div>
+        <figcaption><!-- shoot name, KAYZ to fill --></figcaption>
+      </figure>
     </div>
   </section>
 
