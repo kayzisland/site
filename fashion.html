@@ -20,15 +20,32 @@
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/site.css">
 <style>
-  .work{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,3vw,32px)}
-  .work a{display:block;color:inherit}
-  .work .kz-grade{aspect-ratio:3/4;overflow:hidden}
-  .work img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block;transition:transform .5s cubic-bezier(0.25,1,0.5,1)}
-  .work a:hover img{transform:scale(1.03)}
-  .work figcaption{margin-top:12px;font-family:var(--kz-font-grotesk);font-size:10.5px;letter-spacing:0.18em;color:var(--kz-silver)}
-  .work figure{margin:0}
-  @media (max-width:1024px){.work{grid-template-columns:repeat(3,1fr)}}
-  @media (max-width:720px){.work{grid-template-columns:repeat(2,1fr);gap:14px}.work figcaption{font-size:9.5px;letter-spacing:0.14em;margin-top:8px}}
+  .work{display:grid;grid-template-columns:repeat(8,1fr);gap:clamp(20px,3vw,40px) clamp(16px,2.4vw,28px)}
+  .work figure{margin:0;grid-column:span 2;position:relative}
+  .work figure:nth-child(8n+5){grid-column:2 / span 2}
+  .work figure:nth-child(8n+6){grid-column:4 / span 2}
+  .work figure:nth-child(8n+7){grid-column:6 / span 2}
+  .work a{display:block;color:inherit;position:relative;overflow:hidden}
+  .work .kz-grade{aspect-ratio:3/4;overflow:hidden;position:relative}
+  .work img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block;transition:transform .6s cubic-bezier(0.22,1,0.36,1),filter .4s ease}
+  .work a:hover img{transform:scale(1.05);filter:brightness(1.06)}
+  .work figcaption{margin-top:12px;font-family:var(--kz-font-grotesk);font-size:10.5px;letter-spacing:0.2em;color:var(--kz-dim);transition:color .3s ease}
+  .work a:hover figcaption{color:var(--kz-ink)}
+  .work .peek{position:absolute;left:0;right:0;bottom:0;padding:14px 14px 12px;background:linear-gradient(to top,rgba(18,11,24,0.86),rgba(18,11,24,0));font-family:var(--kz-font-grotesk);font-size:9.5px;letter-spacing:0.18em;color:var(--kz-ink);opacity:0;transform:translateY(8px);transition:opacity .35s ease,transform .35s cubic-bezier(0.22,1,0.36,1)}
+  .work a:hover .peek{opacity:1;transform:translateY(0)}
+  @media (max-width:1024px){
+    .work{grid-template-columns:repeat(6,1fr)}
+    .work figure{grid-column:span 2}
+    .work figure:nth-child(8n+5),.work figure:nth-child(8n+6),.work figure:nth-child(8n+7){grid-column:span 2}
+    .work figure:nth-child(6n+4){grid-column:2 / span 2}
+  }
+  @media (max-width:720px){
+    .work{grid-template-columns:repeat(2,1fr);gap:14px}
+    .work figure,.work figure:nth-child(n){grid-column:span 1}
+    .work figcaption{font-size:9px;letter-spacing:0.14em;margin-top:8px}
+    .work .peek{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){.work img,.work .peek{transition:none}}
 </style>
 </head>
 <body>
@@ -50,7 +67,7 @@
 
   <section style="position:relative;padding:clamp(56px,9vh,110px) clamp(20px,5vw,72px) clamp(40px,6vh,70px)">
     <div class="kz-kicker" style="font-size:12px;margin-bottom:22px;color:var(--kz-accent)">FASHION</div>
-    <h1 style="margin:0;max-width:900px;font-family:var(--kz-font-serif);font-weight:800;font-size:clamp(40px,7.5vw,92px);line-height:1.02;letter-spacing:-0.015em">#PROFESSIONALFINEBOY Gallery<span class="kz-stop">.</span></h1>
+    <h1 style="margin:0;max-width:900px;font-family:var(--kz-font-serif);font-weight:800;font-size:clamp(30px,5.6vw,68px);line-height:1.04;letter-spacing:-0.02em;overflow-wrap:anywhere">#PROFESSIONALFINEBOY Gallery<span class="kz-stop">.</span></h1>
     <p class="kz-standfirst" style="font-size:clamp(16px,2.2vw,19px);max-width:640px;margin:26px 0 0">Modelling<span class="kz-stop">.</span> Creative Direction<span class="kz-stop">.</span> Styling<span class="kz-stop">.</span> The Renaissance In Motion<span class="kz-stop">.</span></p>
     <div style="max-width:720px;margin-top:clamp(30px,5vh,44px);padding-top:clamp(22px,3.5vh,32px);border-top:1px solid var(--kz-hairline)">
       <p style="margin:0;font-family:var(--kz-font-serif);font-style:italic;font-size:clamp(18px,2.8vw,24px);line-height:1.35">"You've got that bold presence that aligns well with what our brand stands for<span class="kz-stop">.</span>"</p>
@@ -60,102 +77,345 @@
 
   <section style="position:relative;padding:0 clamp(20px,5vw,72px) clamp(56px,9vh,110px)">
     <div class="work">
-      <!-- BAPE studio shoot: two frames pending from KAYZ (laughing crate frame + duo crouch); slot leads the modelling run -->
       <figure><a href="https://www.instagram.com/kayzisland">
-        <div class="kz-grade"><img src="media/shoot-thobe-editorial.jpg" alt="Beyond The Surface, cream keffiyeh portrait in black and white" loading="lazy"></div>
+        <div class="kz-grade"><img src="media/shoot-thobe-bridge.jpg" alt="Beyond The Surface shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
         <figcaption>BEYOND THE SURFACE</figcaption>
       </a></figure>
       <figure><a href="https://www.instagram.com/kayzisland">
-        <div class="kz-grade"><img src="media/shoot-blame-the-accent.jpg" alt="Black vest on a Miami street, arms crossed" loading="lazy"></div>
+        <div class="kz-grade"><img src="media/shoot-thobe-editorial.jpg" alt="Beyond The Surface shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>BEYOND THE SURFACE</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-thobe-group.jpg" alt="Beyond The Surface shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>BEYOND THE SURFACE</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-thobe-solo.jpg" alt="Beyond The Surface shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>BEYOND THE SURFACE</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-thobe-trio.jpg" alt="Beyond The Surface shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>BEYOND THE SURFACE</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-blame-the-accent-02.jpg" alt="Blame The Accent shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
         <figcaption>BLAME THE ACCENT</figcaption>
       </a></figure>
       <figure><a href="https://www.instagram.com/kayzisland">
-        <div class="kz-grade"><img src="media/shoot-sex-symbol-01.jpg" alt="White long sleeve and printed trousers in a parking garage" loading="lazy"></div>
+        <div class="kz-grade"><img src="media/shoot-blame-the-accent-03.jpg" alt="Blame The Accent shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>BLAME THE ACCENT</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-blame-the-accent-04.jpg" alt="Blame The Accent shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>BLAME THE ACCENT</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-blame-the-accent-05.jpg" alt="Blame The Accent shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>BLAME THE ACCENT</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-blame-the-accent-06.jpg" alt="Blame The Accent shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>BLAME THE ACCENT</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-blame-the-accent.jpg" alt="Blame The Accent shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>BLAME THE ACCENT</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-sex-symbol-01.jpg" alt="S£X Symbol shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
         <figcaption>S£X SYMBOL</figcaption>
       </a></figure>
       <figure><a href="https://www.instagram.com/kayzisland">
-        <div class="kz-grade"><img src="media/shoot-organised-chaos.jpg" alt="Leaning in a corner-shop doorway in black" loading="lazy"></div>
+        <div class="kz-grade"><img src="media/shoot-sex-symbol-02.jpg" alt="S£X Symbol shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>S£X SYMBOL</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-sex-symbol-03.jpg" alt="S£X Symbol shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>S£X SYMBOL</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-organised-chaos-02.jpg" alt="Organised Chaos shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
         <figcaption>ORGANISED CHAOS</figcaption>
       </a></figure>
       <figure><a href="https://www.instagram.com/kayzisland">
-        <div class="kz-grade"><img src="media/shoot-preppy-pimpin-01.jpg" alt="Fur hood on a night bench, streetlight glow" loading="lazy"></div>
+        <div class="kz-grade"><img src="media/shoot-organised-chaos-03.jpg" alt="Organised Chaos shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>ORGANISED CHAOS</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-organised-chaos-04.jpg" alt="Organised Chaos shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>ORGANISED CHAOS</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-organised-chaos.jpg" alt="Organised Chaos shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>ORGANISED CHAOS</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-preppy-pimpin-01.jpg" alt="Preppy Pimpin shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
         <figcaption>PREPPY PIMPIN</figcaption>
       </a></figure>
       <figure><a href="https://www.instagram.com/kayzisland">
-        <div class="kz-grade"><img src="media/shoot-sakura.jpg" alt="Pink graphic knit against a Berlin street" loading="lazy"></div>
+        <div class="kz-grade"><img src="media/shoot-preppy-pimpin-02.jpg" alt="Preppy Pimpin shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>PREPPY PIMPIN</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-preppy-pimpin-03.jpg" alt="Preppy Pimpin shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>PREPPY PIMPIN</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-sakura-02.jpg" alt="Sakura shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
         <figcaption>SAKURA</figcaption>
       </a></figure>
       <figure><a href="https://www.instagram.com/kayzisland">
-        <div class="kz-grade"><img src="media/shoot-da-gulliest.jpg" alt="Reclined on a leather sofa in an olive puffer" loading="lazy"></div>
+        <div class="kz-grade"><img src="media/shoot-sakura-03.jpg" alt="Sakura shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>SAKURA</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-sakura-04.jpg" alt="Sakura shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>SAKURA</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-sakura-05.jpg" alt="Sakura shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>SAKURA</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-sakura.jpg" alt="Sakura shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>SAKURA</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-da-gulliest-02.jpg" alt="Da Gulliest shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
         <figcaption>DA GULLIEST</figcaption>
       </a></figure>
       <figure><a href="https://www.instagram.com/kayzisland">
-        <div class="kz-grade"><img src="media/shoot-double-vision.jpg" alt="Striped rugby shirt and white hat against the pitch fence" loading="lazy"></div>
+        <div class="kz-grade"><img src="media/shoot-da-gulliest-03.jpg" alt="Da Gulliest shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>DA GULLIEST</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-da-gulliest-05.jpg" alt="Da Gulliest shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>DA GULLIEST</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-da-gulliest.jpg" alt="Da Gulliest shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>DA GULLIEST</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-double-vision-02.jpg" alt="Double Vision shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
         <figcaption>DOUBLE VISION</figcaption>
       </a></figure>
       <figure><a href="https://www.instagram.com/kayzisland">
-        <div class="kz-grade"><img src="media/fash-pink-smoke.jpg" alt="Pink hood in pink smoke, the Carsicko shoot" loading="lazy" style="object-position:50% 12%"></div>
+        <div class="kz-grade"><img src="media/shoot-double-vision-05.jpg" alt="Double Vision shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>DOUBLE VISION</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-double-vision-07.jpg" alt="Double Vision shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>DOUBLE VISION</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-double-vision-08.jpg" alt="Double Vision shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>DOUBLE VISION</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-double-vision.jpg" alt="Double Vision shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>DOUBLE VISION</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-motion-sick-01.jpg" alt="Motion Sick, Matter Pink shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
         <figcaption>MOTION SICK, MATTER PINK</figcaption>
       </a></figure>
       <figure><a href="https://www.instagram.com/kayzisland">
-        <div class="kz-grade"><img src="media/shoot-bite-me-01.jpg" alt="Black on black on the leather couch against white brick" loading="lazy"></div>
+        <div class="kz-grade"><img src="media/shoot-motion-sick-02.jpg" alt="Motion Sick, Matter Pink shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>MOTION SICK, MATTER PINK</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-renaissance-in-motion-02.jpg" alt="Motion Sick, Matter Pink shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>MOTION SICK, MATTER PINK</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-renaissance-in-motion-04.jpg" alt="Motion Sick, Matter Pink shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>MOTION SICK, MATTER PINK</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-renaissance-in-motion-05.jpg" alt="Motion Sick, Matter Pink shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>MOTION SICK, MATTER PINK</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-renaissance-in-motion-06.jpg" alt="Motion Sick, Matter Pink shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>MOTION SICK, MATTER PINK</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-renaissance-in-motion.jpg" alt="Motion Sick, Matter Pink shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>MOTION SICK, MATTER PINK</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/fash-pink-smoke.jpg" alt="Motion Sick, Matter Pink shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>MOTION SICK, MATTER PINK</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-pink-leopard-duo.jpg" alt="Motion Sick, Matter Pink shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>MOTION SICK, MATTER PINK</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/fash-salmon-court.jpg" alt="Motion Sick, Matter Pink shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>MOTION SICK, MATTER PINK</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-bite-me-01.jpg" alt="Bite Me shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
         <figcaption>BITE ME</figcaption>
       </a></figure>
       <figure><a href="https://www.instagram.com/kayzisland">
-        <div class="kz-grade"><img src="media/shoot-goalaso.jpg" alt="At the signpost in olive cargos" loading="lazy"></div>
+        <div class="kz-grade"><img src="media/shoot-bite-me-02.jpg" alt="Bite Me shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>BITE ME</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-goalaso-02.jpg" alt="Goalaso shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
         <figcaption>GOALASO</figcaption>
       </a></figure>
       <figure><a href="https://www.instagram.com/kayzisland">
-        <div class="kz-grade"><img src="media/shoot-vanilla-sixtyfour.jpg" alt="The Vanilla jersey from the back, script across the shoulders" loading="lazy"></div>
+        <div class="kz-grade"><img src="media/shoot-goalaso-03.jpg" alt="Goalaso shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>GOALASO</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-goalaso-04.jpg" alt="Goalaso shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>GOALASO</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-goalaso-05.jpg" alt="Goalaso shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>GOALASO</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-goalaso.jpg" alt="Goalaso shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>GOALASO</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-vanilla-sixtyfour-02.jpg" alt="@Fromvanilla, With Love shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
         <figcaption>@FROMVANILLA, WITH LOVE</figcaption>
       </a></figure>
       <figure><a href="https://www.instagram.com/kayzisland">
-        <div class="kz-grade"><img src="media/shoot-pdtr.jpg" alt="Seated in the red phone box, legs crossed, Jordan 1s" loading="lazy"></div>
-        <figcaption>PAINT DA TOWN RED</figcaption>
+        <div class="kz-grade"><img src="media/shoot-vanilla-sixtyfour.jpg" alt="@Fromvanilla, With Love shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>@FROMVANILLA, WITH LOVE</figcaption>
       </a></figure>
       <figure><a href="https://www.instagram.com/kayzisland">
-        <div class="kz-grade"><img src="media/shoot-camo-duo.jpg" alt="Camo duo facing off against slatted shutters" loading="lazy"></div>
-        <figcaption>CAMO DUO</figcaption>
-      </a></figure>
-      <figure><a href="https://www.instagram.com/kayzisland">
-        <div class="kz-grade"><img src="media/shoot-pgwv-tee.jpg" alt="The PGWV tee against a white wall" loading="lazy"></div>
-        <figcaption>PGWV</figcaption>
-      </a></figure>
-      <figure><a href="https://www.instagram.com/kayzisland">
-        <div class="kz-grade"><img src="media/shoot-thobe-solo.jpg" alt="The pale blue thobe, full length on the estate" loading="lazy"></div>
-        <figcaption>THOBE EDITORIAL</figcaption>
-      </a></figure>
-      <figure><a href="https://www.instagram.com/kayzisland">
-        <div class="kz-grade"><img src="media/shoot-stay-free.jpg" alt="Headwrap at the pyramids of Giza at golden hour" loading="lazy"></div>
-        <figcaption>STAY FREE</figcaption>
-      </a></figure>
-      <figure><a href="https://www.instagram.com/kayzisland">
-        <div class="kz-grade"><img src="media/shoot-renaissance-in-motion.jpg" alt="Red check shirt leaning on a bike by a brick wall" loading="lazy"></div>
-        <figcaption>RENAISSANCE IN MOTION</figcaption>
-      </a></figure>
-      <figure><a href="https://www.instagram.com/kayzisland">
-        <div class="kz-grade"><img src="media/shoot-bare-grillz.jpg" alt="Seated on a snowy outcrop in fleece and beanie" loading="lazy"></div>
-        <figcaption>BARE GRILLZ</figcaption>
-      </a></figure>
-      <figure><a href="https://www.instagram.com/kayzisland">
-        <div class="kz-grade"><img src="media/shoot-inevitable.jpg" alt="American football jersey and helmet under night light" loading="lazy"></div>
-        <figcaption>INEVITABLE</figcaption>
-      </a></figure>
-      <figure><a href="https://www.instagram.com/kayzisland">
-        <div class="kz-grade"><img src="media/shoot-vanilla-whites-timbs.jpg" alt="All white with Timberlands, seated on a bench" loading="lazy"></div>
+        <div class="kz-grade"><img src="media/shoot-vanilla-whites-timbs-02.jpg" alt="Vanilla Whites shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
         <figcaption>VANILLA WHITES</figcaption>
       </a></figure>
       <figure><a href="https://www.instagram.com/kayzisland">
-        <div class="kz-grade"><img src="media/fash-brick-bike-flannel.jpg" alt="Flannel and bike against the brick" loading="lazy"></div>
+        <div class="kz-grade"><img src="media/shoot-vanilla-whites-timbs.jpg" alt="Vanilla Whites shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>VANILLA WHITES</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-pdtr-02.jpg" alt="Paint Da Town Red shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>PAINT DA TOWN RED</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-pdtr.jpg" alt="Paint Da Town Red shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>PAINT DA TOWN RED</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-camo-duo-02.jpg" alt="Camo Duo shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>CAMO DUO</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-camo-duo.jpg" alt="Camo Duo shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>CAMO DUO</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-pgwv-tee-02.jpg" alt="Pgwv shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>PGWV</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-pgwv-tee.jpg" alt="Pgwv shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>PGWV</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-wesh-02.jpg" alt="Wesh shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>WESH</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-wesh-04.jpg" alt="Wesh shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>WESH</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-stay-free-02.jpg" alt="Stay Free shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>STAY FREE</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-stay-free-03.jpg" alt="Stay Free shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>STAY FREE</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-stay-free-04.jpg" alt="Stay Free shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>STAY FREE</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-stay-free-05.jpg" alt="Stay Free shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>STAY FREE</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-stay-free.jpg" alt="Stay Free shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>STAY FREE</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-bare-grillz-02.jpg" alt="Bare Grillz shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>BARE GRILLZ</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-bare-grillz-03.jpg" alt="Bare Grillz shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>BARE GRILLZ</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-bare-grillz-04.jpg" alt="Bare Grillz shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>BARE GRILLZ</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-bare-grillz-05.jpg" alt="Bare Grillz shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>BARE GRILLZ</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-bare-grillz.jpg" alt="Bare Grillz shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>BARE GRILLZ</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-inevitable-02.jpg" alt="Inevitable shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>INEVITABLE</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-inevitable-04.jpg" alt="Inevitable shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>INEVITABLE</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-inevitable.jpg" alt="Inevitable shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>INEVITABLE</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-studio-editorial-02.jpg" alt="Studio Editorial shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>STUDIO EDITORIAL</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-studio-editorial-03.jpg" alt="Studio Editorial shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>STUDIO EDITORIAL</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/shoot-studio-editorial.jpg" alt="Studio Editorial shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>STUDIO EDITORIAL</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/fash-brick-bike-flannel.jpg" alt="Brick shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
         <figcaption>BRICK</figcaption>
       </a></figure>
       <figure><a href="https://www.instagram.com/kayzisland">
-        <div class="kz-grade"><img src="media/fash-doorway-bat.jpg" alt="Doorway stance, bat in hand" loading="lazy"></div>
+        <div class="kz-grade"><img src="media/fash-doorway-bat.jpg" alt="Gotham City'S Saviour shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
         <figcaption>GOTHAM CITY'S SAVIOUR</figcaption>
       </a></figure>
       <figure><a href="https://www.instagram.com/kayzisland">
-        <div class="kz-grade"><img src="media/fash-salmon-court.jpg" alt="Salmon zip-up at the cage" loading="lazy"></div>
-        <figcaption>SALMON</figcaption>
+        <div class="kz-grade"><img src="media/fash-white-hoodie-graffiti.jpg" alt="Graffiti shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>GRAFFITI</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/fash-italia-jersey.jpg" alt="Italia shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>ITALIA</figcaption>
+      </a></figure>
+      <figure><a href="https://www.instagram.com/kayzisland">
+        <div class="kz-grade"><img src="media/fash-bw-duo.jpg" alt="Double Vision shoot frame" loading="lazy"><div class="peek">VIEW ON INSTAGRAM →</div></div>
+        <figcaption>DOUBLE VISION</figcaption>
       </a></figure>
     </div>
   </section>
