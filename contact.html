@@ -59,8 +59,9 @@
   </section>
 
   <section style="position:relative;padding:clamp(20px,3vh,32px) clamp(20px,5vw,72px) clamp(56px,9vh,110px)">
-    <form name="booking" method="POST" data-netlify="true" style="max-width:720px;display:flex;flex-direction:column;gap:clamp(28px,4vh,40px)">
+    <form name="booking" method="POST" action="/thanks.html" netlify data-netlify="true" data-netlify-honeypot="bot-field" style="max-width:720px;display:flex;flex-direction:column;gap:clamp(28px,4vh,40px)">
       <input type="hidden" name="form-name" value="booking">
+      <p style="display:none"><label>Leave this empty: <input name="bot-field"></label></p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(28px,4vh,40px) clamp(24px,4vw,48px)">
         <label style="display:flex;flex-direction:column;gap:10px">
           <span style="font-family:var(--kz-font-grotesk);font-size:10.5px;letter-spacing:0.2em;color:var(--kz-silver)">NAME</span>
