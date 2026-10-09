@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Blank paperwork templates, not for the index.
+Disallow: /invoice.html
+Disallow: /booking-confirmation.html
+Disallow: /rate-card.html
+Disallow: /thanks.html
+
+Sitemap: https://kayzisland.com/sitemap.xml
